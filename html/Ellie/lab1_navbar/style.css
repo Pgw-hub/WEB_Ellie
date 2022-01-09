@@ -1,0 +1,97 @@
+body{
+    margin : 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding : 8px 12px;
+}
+
+.navbar__logo i{
+    color: coral;
+}
+
+a{
+    text-decoration: none;
+    color : white;
+    
+}
+
+.navbar__logo{
+    font-size : 24px;
+}
+ 
+.navbar__menu{
+    display : flex;
+    list-style: none;
+    padding-left: none;
+}
+.navbar__menu li:hover{
+    background-color: coral;
+    border-radius: 4px;
+
+}
+.navbar__menu li {
+    padding :8px 12px;
+    padding-left: none;
+    /* 위아래는 8픽셀, 양옆은 12픽셀 */
+} 
+
+.navbar__icons {
+    display : flex;
+    list-style: none;
+    padding-left : none;
+}
+
+.navbar__icons li{
+    display : flex;
+    justify-content: space-between;
+    padding : 4px 8px;
+    /* 리스트에 있는 친구들에게 간격을 줄려면 이렇게 */
+}
+
+.navbar__toogleBtn{
+    display : none;
+    position : absolute;
+    right: 32px;
+    font-size: 24px;
+    color : coral; 
+} 
+
+
+@media screen and (max-width : 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items : flex-start;
+        padding: 8px 24px;
+    }
+    .navbar__menu{
+        /* display : none; */
+        flex-direction: column;
+        align-items: center;
+        width : 100%;
+    }
+
+    .navbar__menu li{
+        width : 100%;
+        text-align : center;        
+    }
+    
+    .navbar__icons{
+        /* display : none; */
+        width : 100%;
+        justify-content: center;
+        /* align-items:center; */
+    }
+
+    .navbar__toogleBtn{
+        display : block;
+    }
+    
+}
+
+
